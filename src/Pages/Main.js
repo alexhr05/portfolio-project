@@ -590,13 +590,13 @@ function Main() {
           display: "flex",
           color: "black",
           justifyContent: "center",
+          backgroundColor: "rgb(230, 230, 230)",
           mt: 30,
           pb: 3,
         }}
       >
         <Typography fontSize={20}>
-          © Alex Hristov - alexhr05@gmail.com
-        </Typography>
+          © Alex Hristov. All rights reserved.</Typography>
       </Box>
     </Box>
   );
