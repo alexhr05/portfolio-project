@@ -164,7 +164,7 @@ function Projects() {
                     component="img"
                     image={item.imagePath}
                     alt={item.title}
-                    sx={{ height: 160, objectFit: "cover" }}
+                    sx={{ height: 200, objectFit: "stretch" }}
                   />
                 </Link>
                 <CardContent
@@ -174,7 +174,7 @@ function Projects() {
                     alignItems: "flex-start",
                     flexGrow: 1,
                     p: 2.5,
-                    "&:last-child": { pb: 2.5 },
+                    "&:last-child": { pb: 2 },
                   }}
                 >
                   <Typography
