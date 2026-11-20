@@ -191,7 +191,7 @@ function Projects() {
                       mt: 0.75,
                       display: "-webkit-box",
                       WebkitBoxOrient: "vertical",
-                      WebkitLineClamp: 3,
+                      WebkitLineClamp: 4,
                       overflow: "hidden",
                     }}
                   >
@@ -216,7 +216,7 @@ function Projects() {
                   <Button
                     component={Link}
                     to={projectPath(item.url)}
-                    endIcon={<ArrowForwardIcon />}
+                    startIcon={<ArrowForwardIcon />}
                     sx={{
                       mt: 1.5,
                       p: 0,
