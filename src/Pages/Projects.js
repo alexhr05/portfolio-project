@@ -98,6 +98,13 @@ function Projects() {
       url: "treasurehunters",
       tags: ["JavaScript", "HTML", "CSS", "Platform game"],
     },
+    {
+      imagePath: "RestaurantManagementSystem",
+      title: "Restaurant Management System",
+      text: "Това е система за управление на ресторанти. Ефективен и лесен за използване софтуер за ресторант. Тук можете да управлявате склада, менюто, поръчките и оборота - в зависимост от ролята си. Наличните роли са сервитьор и управител.",
+      url: "restaurantmanagementsystem",
+      tags: ["C++", "OOP"],
+    },
   ];
 
   const pageSize = 6;
