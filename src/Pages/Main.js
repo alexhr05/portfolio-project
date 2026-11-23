@@ -209,40 +209,33 @@ function Main() {
                 fontSize: { xs: 12, sm: 14, md: 16, lg: 18, xl: 20 },
               }}
             >
-              За себе си мога да кажа, че съм постянен, работещ в екип,
-              комуникативен, амбициозен, търпелив. Моите най-добри качества са
-              отговорност, изпълнителност, точност, адаптивност, коректност и
-              стремеж за развитие. Приоритетите ми са да свърша в срок
-              поставените ми задачи.
+              Hello! I'm Alex Hristov, a software developer and computer science
+              student at Sofia University. I enjoy turning ideas into practical
+              applications and building software that is clear, useful and reliable.
             </Typography>
             <Typography
               sx={{
                 mt: 3,
                 fontSize: { xs: 12, sm: 14, md: 16, lg: 18, xl: 20 },
+                lineHeight: 1.75,
+                color: "rgb(71, 85, 105)",
               }}
             >
-              От 5 клас посещавах Telerik Academy, в която програмирах. Там
-              изучвах JavaScript. Веднага след приемането ми в НПМГ започнах да
-              участвам в олимпиади по Информационни технологии. В 8 клас
-              започнах да навлизам по навътре в IT сферата. Като програмни езици
-              досега съм използвал следните: JavaScript, Python, PHP, MySQL,
-              C++, C#, Java, Kotlin.
+              I graduated from NPMG in Sofia with a specialization in Software and
+              Hardware Sciences. My experience includes web development, mobile
+              applications, desktop applications and game development.
             </Typography>
             <Typography
               sx={{
                 mt: 3,
                 fontSize: { xs: 12, sm: 14, md: 16, lg: 18, xl: 20 },
+                lineHeight: 1.75,
+                color: "rgb(71, 85, 105)",
               }}
             >
-              Други допълнения към езиците, които ползвам са jQuery, Ajax,
-              Bootstrap, Angular.js и React.js към JavaScript, Pygame, OpenCV и
-              Yolov5 към Python, използвам съм Аndroid studio за проекти на Java
-              и Kotlin, Unity и ASP.Net със C#, . Често използвам JS и Java в
-              Android studio. В Android studio на Java съм писал няколко
-              приложения : съхраняване на лична информация, пароли и други;
-              контролиране на входящи обаждания, звук и други. През изминалата
-              2023 г. бях на стаж във софтуерната компания Accedia юли до
-              септември.
+              I am responsible, adaptable and comfortable working in a team. I pay
+              attention to detail, communicate openly and aim to deliver projects
+              on time while continuing to learn and improve.
             </Typography>
           </Box>
 
