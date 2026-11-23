@@ -103,6 +103,13 @@ function Projects() {
       title: "Restaurant Management System",
       text: "Това е система за управление на ресторанти. Ефективен и лесен за използване софтуер за ресторант. Тук можете да управлявате склада, менюто, поръчките и оборота - в зависимост от ролята си. Наличните роли са сервитьор и управител.",
       url: "restaurantmanagementsystem",
+      tags: ["C++"],
+    },
+    {
+      imagePath: "CinemaManagementSystem",
+      title: "Cinema Management System",
+      text: "Това е система за управление на киносалони. Включва управление на зали, филми и билети, като системата поддържа различни видове потребители с различни привилегии",
+      url: "cinemamanagementsystem",
       tags: ["C++", "OOP"],
     },
   ];
