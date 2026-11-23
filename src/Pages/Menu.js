@@ -35,7 +35,7 @@ function Menu() {
   return (
     <Box component="header">
       <CssBaseline />
-      <AppBar component="nav" aria-label="Main navigation">
+      <AppBar component="nav" aria-label="Main navigation" sx={{background: "#1457e8"}}>
         <Toolbar>
           <Typography
             variant="h6"
