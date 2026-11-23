@@ -112,6 +112,13 @@ function Projects() {
       url: "cinemamanagementsystem",
       tags: ["C++", "OOP"],
     },
+        {
+      imagePath: "UniCourses-management-system",
+      title: "University Courses Management System",
+      text: "Това е система за управление на университетски курсове. Включва управление на курсове, студенти и преподаватели. Системата поддържа различни видове роли и може да се добавят различни ученици и преподаватели.",
+      url: "unicoursesmanagementsystem",
+      tags: ["C++", "OOP"],
+    },
   ];
 
   const pageSize = 6;

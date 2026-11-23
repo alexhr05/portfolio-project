@@ -38,7 +38,7 @@ function Menu() {
       <AppBar
         component="nav"
         aria-label="Main navigation"
-        position="relative"
+        position="sticky"
         sx={{ background: "#1457e8" }}
       >
         <Toolbar>
