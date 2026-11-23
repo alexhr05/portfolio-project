@@ -272,6 +272,29 @@ function Main() {
                 </Typography>
               </CardContent>
             </Card>
+            <Card sx={{ borderRadius: "18px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+              <CardContent sx={{ p: 3 }}>
+                <Typography sx={{ fontSize: 20, fontWeight: 700, mb: 2 }}>Interests</Typography>
+                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                  {["UI/UX Design", "Cloud Computing", "Web Accessibility", "Photography", "Hiking"].map((interest) => (
+                    <Box
+                      key={interest}
+                      sx={{
+                        px: 1.25,
+                        py: 0.75,
+                        borderRadius: "999px",
+                        bgcolor: "rgb(239, 246, 255)",
+                        color: "rgb(37, 99, 235)",
+                        fontSize: 13,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {interest}
+                    </Box>
+                  ))}
+                </Box>
+              </CardContent>
+            </Card>
           </Box>
         </Box>
         <Box
