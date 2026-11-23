@@ -241,65 +241,37 @@ function Main() {
 
           <Box
             sx={{
-              mt: 13,
               display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-
-              width: "100%",
+              flexDirection: "column",
+              gap: 2,
+              width: { xs: "100%", md: "46%" },
+              p: 3,
             }}
           >
-            <Box>
-              <Typography
-                sx={{
-                  fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                  fontWeight: "bold",
-                }}
-              >
-                Age
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                  fontWeight: "bold",
-                  mt: 2,
-                }}
-              >
-                Residence
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                  fontWeight: "bold",
-                  mt: 2,
-                }}
-              >
-                Email
-              </Typography>
-            </Box>
-            <Box>
-              <Typography
-                sx={{ fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 } }}
-              >
-                {today.getFullYear() - 2005}
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                  mt: 2,
-                }}
-              >
-                Bulgaria
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                  mt: 2,
-                }}
-              >
-                alexhr05@gmail.com
-              </Typography>
-            </Box>
+            <Card sx={{ borderRadius: "18px", boxShadow: "0 8px 24px rgba(15, 23, 42, 0.08)" }}>
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2 }}>
+                  <BoltOutlinedIcon sx={{ color: "rgb(37, 99, 235)" }} />
+                  <Typography sx={{ fontSize: 20, fontWeight: 700 }}>Quick Facts</Typography>
+                </Box>
+                <Typography sx={{ color: "rgb(71, 85, 105)", fontSize: 14, mb: 1 }}>
+                  <Box component="span" sx={{ fontWeight: 700, color: "rgb(30, 41, 59)", mr: 1 }}>Age</Box>
+                  {today.getFullYear() - 2005}
+                </Typography>
+                <Typography sx={{ color: "rgb(71, 85, 105)", fontSize: 14, mb: 1 }}>
+                  <Box component="span" sx={{ fontWeight: 700, color: "rgb(30, 41, 59)", mr: 1 }}>Location</Box>
+                  Bulgaria
+                </Typography>
+                <Typography sx={{ color: "rgb(71, 85, 105)", fontSize: 14, mb: 1, wordBreak: "break-word" }}>
+                  <Box component="span" sx={{ fontWeight: 700, color: "rgb(30, 41, 59)", mr: 1 }}>Email</Box>
+                  alexhr05@gmail.com
+                </Typography>
+                <Typography sx={{ color: "rgb(71, 85, 105)", fontSize: 14 }}>
+                  <Box component="span" sx={{ fontWeight: 700, color: "rgb(30, 41, 59)", mr: 1 }}>Languages</Box>
+                  Bulgarian, English
+                </Typography>
+              </CardContent>
+            </Card>
           </Box>
         </Box>
         <Box
