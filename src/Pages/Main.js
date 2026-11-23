@@ -24,6 +24,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckIcon from "@mui/icons-material/Check";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import FrontendIcon from "../Images/frontendIcon.png";
 import BackendIcon from "../Images/backendIcon.png";
 import FrameworkIcon from "../Images/frameworkIcon.png";
@@ -195,18 +198,10 @@ function Main() {
                 fontWeight: "bold",
               }}
             >
-              За мен
-            </Typography>
-            <Typography
-              sx={{
-                mt: 3,
-                fontSize: { xs: 12, sm: 14, md: 16, lg: 18, xl: 20 },
-              }}
-            >
-              Моето име е Алекс Христов. 1 курс студент съм във Софийския
-              университет във Факултетат по математика и информатика(ФМИ).
-              Завършил съм НПМГ в гр. София със специалност Софтуерни и
-              Хардуерни науки.
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+                <PersonOutlineIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 22 }} />
+                <span>Who I Am</span>
+              </Box>
             </Typography>
             <Typography
               sx={{
