@@ -69,19 +69,22 @@ function Main() {
   const today = new Date();
   const journeyEntries = [
     {
-      date: "2026",
-      title: "Edit Creation",
-      organization: "",
-      description:
-        "Creating and editing digital content, shaping ideas into polished results, and developing new creative skills.",
+      date: "February - June 2026",
+      title: "Freelance Software Developer",
+      organization: "Edit Creation",
+      description: [
+        "Customized an investor portal on a ready-made platform using HTML, CSS and JavaScript.",
+        "Designed layouts, tables, media embeds and other interface features.",
+      ],
       isCurrent: true,
     },
     {
       date: "July - September 2023",
       title: "Software Development Intern",
       organization: "Accedia",
-      description:
+      description: [
         "Gained practical experience by contributing to software development tasks during an internship.",
+      ],
       isCurrent: false,
     },
   ];
@@ -359,7 +362,7 @@ function Main() {
                     width: 13,
                     height: 13,
                     flexShrink: 0,
-                    mt: 0.5,
+ 
                     borderRadius: "50%",
                     bgcolor: entry.isCurrent
                       ? "rgb(37, 99, 235)"
@@ -380,9 +383,29 @@ function Main() {
                       {entry.organization}
                     </Typography>
                   )}
-                  <Typography sx={{ mt: 1, color: "rgb(71, 85, 105)", lineHeight: 1.7, fontSize: 14 }}>
-                    {entry.description}
-                  </Typography>
+                  {Array.isArray(entry.description) ? (
+                    <Box
+                      component="ul"
+                      sx={{
+                        mt: 1,
+                        mb: 0,
+                        pl: 2.5,
+                        color: "rgb(71, 85, 105)",
+                        lineHeight: 1.7,
+                        fontSize: 14,
+                      }}
+                    >
+                      {entry.description.map((item) => (
+                        <Box component="li" key={item} sx={{ mb: 0.5 }}>
+                          {item}
+                        </Box>
+                      ))}
+                    </Box>
+                  ) : (
+                    <Typography sx={{ mt: 1, color: "rgb(71, 85, 105)", lineHeight: 1.7, fontSize: 14 }}>
+                      {entry.description}
+                    </Typography>
+                  )}
                 </Box>
               </Box>
             ))}
