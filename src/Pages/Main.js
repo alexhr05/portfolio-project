@@ -27,6 +27,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import FrontendIcon from "../Images/frontendIcon.png";
 import BackendIcon from "../Images/backendIcon.png";
 import FrameworkIcon from "../Images/frameworkIcon.png";
@@ -66,6 +67,24 @@ function Main() {
   ];
   const otherSkills = ["PyGame", "Xampp", "Balsamiq"];
   const today = new Date();
+  const journeyEntries = [
+    {
+      date: "2026",
+      title: "Edit Creation",
+      organization: "",
+      description:
+        "Creating and editing digital content, shaping ideas into polished results, and developing new creative skills.",
+      isCurrent: true,
+    },
+    {
+      date: "July - September 2023",
+      title: "Software Development Intern",
+      organization: "Accedia",
+      description:
+        "Gained practical experience by contributing to software development tasks during an internship.",
+      isCurrent: false,
+    },
+  ];
 
   return (
     <Box
@@ -295,6 +314,78 @@ function Main() {
                 </Box>
               </CardContent>
             </Card>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            bgcolor: "rgb(255, 255, 255)",
+            boxShadow: 1,
+            p: { xs: 3, sm: 4, md: 5 },
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 36,
+                height: 36,
+                borderRadius: "10px",
+                bgcolor: "rgb(239, 246, 255)",
+              }}
+            >
+              <WorkOutlineIcon sx={{ color: "rgb(37, 99, 235)" }} />
+            </Box>
+            <Typography sx={{ fontSize: { xs: 20, sm: 22, md: 24 }, fontWeight: 700 }}>
+              My Journey
+            </Typography>
+          </Box>
+          <Box sx={{ mt: 3, ml: 1.5, position: "relative" }}>
+            <Box
+              sx={{
+                position: "absolute",
+                left: "6px",
+                top: 8,
+                bottom: 20,
+                width: "1px",
+                bgcolor: "rgb(226, 232, 240)",
+              }}
+            />
+            {journeyEntries.map((entry) => (
+              <Box key={entry.title} sx={{ display: "flex", gap: 2, position: "relative", mb: 3 }}>
+                <Box
+                  sx={{
+                    width: 13,
+                    height: 13,
+                    flexShrink: 0,
+                    mt: 0.5,
+                    borderRadius: "50%",
+                    bgcolor: entry.isCurrent
+                      ? "rgb(37, 99, 235)"
+                      : "rgb(203, 213, 225)",
+                    border: "2px solid white",
+                    zIndex: 1,
+                  }}
+                />
+                <Box sx={{ pb: 1 }}>
+                  <Typography sx={{ color: "rgb(37, 99, 235)", fontSize: 14, fontWeight: 700 }}>
+                    {entry.date}
+                  </Typography>
+                  <Typography sx={{ mt: 0.75, fontSize: 18, fontWeight: 700 }}>
+                    {entry.title}
+                  </Typography>
+                  {entry.organization && (
+                    <Typography sx={{ mt: 0.5, color: "rgb(100, 116, 139)", fontSize: 14 }}>
+                      {entry.organization}
+                    </Typography>
+                  )}
+                  <Typography sx={{ mt: 1, color: "rgb(71, 85, 105)", lineHeight: 1.7, fontSize: 14 }}>
+                    {entry.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
           </Box>
         </Box>
         <Box
