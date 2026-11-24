@@ -73,8 +73,8 @@ function Main() {
       title: "Freelance Software Developer",
       organization: "Edit Creation",
       description: [
-        "Customized an investor portal on a ready-made platform using HTML, CSS and JavaScript.",
-        "Designed layouts, tables, media embeds and other interface features.",
+        "Customized an investor portal on a ready-made platform using HTML, CSS and JavaScript. Designed layouts, tables, media embeds and other interface features.",
+        "Worked directly with the client to turn requests into functional software solutions.",
       ],
       isCurrent: true,
     },
@@ -83,6 +83,7 @@ function Main() {
       title: "Software Development Intern",
       organization: "Accedia",
       description: [
+        "",
         "Gained practical experience by contributing to software development tasks during an internship.",
       ],
       isCurrent: false,
@@ -389,7 +390,7 @@ function Main() {
                       sx={{
                         mt: 1,
                         mb: 0,
-                        pl: 2.5,
+                        pl: 3,
                         color: "rgb(71, 85, 105)",
                         lineHeight: 1.7,
                         fontSize: 14,
@@ -435,8 +436,8 @@ function Main() {
                 fontSize: { xs: 16, sm: 18, md: 20, lg: 23, xl: 25 },
                 borderLeft: 5,
                 borderRight: 5,
-                pl: 2,
-                pr: 2,
+                pl: 3,
+                pr: 3,
                 borderColor: "Blue",
                 fontWeight: "bold",
               }}
