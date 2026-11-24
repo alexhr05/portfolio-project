@@ -78,12 +78,24 @@ function Main() {
       ],
       isCurrent: true,
     },
+     {
+      date: "November 2025 - March 2026",
+      title: "Mentorship program",
+      organization: "SAP",
+      description: [
+        "Learn C# and a little .NET framework.",
+        "Worked in a small team, but close-knit team",    
+        "Gained practical experience by contributing to software development tasks during an internship.",
+      ],
+      isCurrent: false,
+    },
     {
       date: "July - September 2023",
       title: "Software Development Intern",
       organization: "Accedia",
       description: [
-        "",
+        "Learn C# and a little .NET framework.",
+        "Worked in a small team, but close-knit team",    
         "Gained practical experience by contributing to software development tasks during an internship.",
       ],
       isCurrent: false,
