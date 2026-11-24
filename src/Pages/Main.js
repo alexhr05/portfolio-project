@@ -83,9 +83,9 @@ function Main() {
       title: "Mentorship program",
       organization: "SAP",
       description: [
-        "Learn C# and a little .NET framework.",
-        "Worked in a small team, but close-knit team",    
-        "Gained practical experience by contributing to software development tasks during an internship.",
+        "Learn more and exercise my skills in Java for android development.",
+        "Practiced the skill of project management skills by documenting my work step by step in GitHub.Gained experience in working with a mentor and receiving feedback on my work",    
+        "Gained experience in presenting project to an audience of 50-60 people and answering questions about the project.",
       ],
       isCurrent: false,
     },
