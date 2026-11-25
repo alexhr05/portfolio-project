@@ -28,7 +28,6 @@ import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InsightsOutlinedIcon from "@mui/icons-material/InsightsOutlined";
-import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
 
 import Menu from "./Menu.js";
 
@@ -47,17 +46,7 @@ function Main() {
       url: "https://www.linkedin.com/in/alex-hristov-14b00a277/",
     },
   ];
-  const skillCategories = [
-    {
-      title: "Frontend Development",
-      icon: <DesktopWindowsOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 18 }} />,
-      skills: [
-        { name: "React & Next.js", level: 86 },
-        { name: "TypeScript", level: 78 },
-        { name: "Tailwind CSS", level: 91 },
-      ],
-    },
-  ];
+  const skillCategories = [];
   const today = new Date();
   const journeyEntries = [
     {
