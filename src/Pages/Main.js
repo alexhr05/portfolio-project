@@ -130,7 +130,7 @@ function Main() {
         display: "flex",
         flexDirection: "column",
         bgcolor: "rgb(255, 255, 255)",
-        height: window.innerHeight,
+        minHeight: "100vh",
       }}
     >
       <Menu />
@@ -142,6 +142,7 @@ function Main() {
           mt: { xs: "8%", sm: "8%", md: "7%" },
           borderRadius: "30px",
           boxShadow: 2,
+          mb:3,
         }}
       >
         <Box
@@ -451,7 +452,7 @@ function Main() {
             bgcolor: "rgb(255, 255, 255)",
             boxShadow: 1,
             border: "1px solid rgb(226, 232, 240)",
-            borderRadius: "18px",
+            mt:3,
             p: { xs: 2.5, md: 3.5 },
           }}
         >
@@ -508,9 +509,7 @@ function Main() {
                       }}
                     >
                       <Typography sx={{ fontSize: "inherit" }}>{skill.name}</Typography>
-                      <Typography sx={{ color: "rgb(37, 99, 235)", fontSize: "inherit" }}>
-                        {skill.level}%
-                      </Typography>
+                      
                     </Box>
                     <Box
                       sx={{
@@ -538,20 +537,25 @@ function Main() {
       </Box>
 
       <Box
+        component="footer"
         sx={{
           width: "100%",
-          height: "80px",
-          border: "solid 1 px",
+          minHeight: 96,
+          boxSizing: "border-box",
           display: "flex",
-          color: "black",
+          alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "rgb(230, 230, 230)",
-          mt: 30,
-          pb: 3,
+          textAlign: "center",
+          px: 2,
+          py: 5,
+          mt: 5,
+          color: "rgb(148, 163, 184)",
+          backgroundColor: "rgb(17, 24, 39)",
         }}
       >
-        <Typography fontSize={20}>
-          © Alex Hristov. All rights reserved.</Typography>
+        <Typography sx={{ fontSize: { xs: 12, sm: 14 }, lineHeight: 1.6 }}>
+          © {new Date().getFullYear()} Alex Hristov. All rights reserved.
+        </Typography>
       </Box>
     </Box>
   );
