@@ -358,7 +358,6 @@ function Main() {
         <Box
           sx={{
             bgcolor: "rgb(255, 255, 255)",
-            boxShadow: 1,
             p: { xs: 3, sm: 4, md: 5 },
           }}
         >
@@ -450,9 +449,6 @@ function Main() {
         <Box
           sx={{
             bgcolor: "rgb(255, 255, 255)",
-            boxShadow: 1,
-            border: "1px solid rgb(226, 232, 240)",
-            mt:3,
             p: { xs: 2.5, md: 3.5 },
           }}
         >
