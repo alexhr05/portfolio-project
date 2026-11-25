@@ -38,15 +38,18 @@ import Menu from "./Menu.js";
 function Main() {
   const icons = [
     {
-      iconBut: <InstagramIcon sx={{ fontSize: { lg: 30, xl: 40 } }} />,
+      label: "Instagram",
+      iconBut: <InstagramIcon sx={{ fontSize: { xs: 20, sm: 24, md: 27, lg: 30, xl: 34 } }} />,
       url: "https://www.instagram.com/a.hristov_05/",
     },
     {
-      iconBut: <FacebookIcon sx={{ fontSize: { lg: 30, xl: 40 } }} />,
+      label: "Facebook",
+      iconBut: <FacebookIcon sx={{ fontSize: { xs: 20, sm: 24, md: 27, lg: 30, xl: 34 } }} />,
       url: "https://www.facebook.com/profile.php?id=100023840763475",
     },
     {
-      iconBut: <LinkedInIcon sx={{ fontSize: { lg: 30, xl: 40 } }} />,
+      label: "LinkedIn",
+      iconBut: <LinkedInIcon sx={{ fontSize: { xs: 20, sm: 24, md: 27, lg: 30, xl: 34 } }} />,
       url: "https://www.linkedin.com/in/alex-hristov-14b00a277/",
     },
   ];
@@ -137,12 +140,11 @@ function Main() {
 
       <Box
         sx={{
-          ml: { xs: "13%", sm: "13%", md: "15%", lg: "18%", xl: "20%" },
-          mr: { xs: "13%", sm: "13%", md: "15%", lg: "18%", xl: "20%" },
-          mt: { xs: "8%", sm: "8%", md: "7%" },
+          mx: { xs: 2, sm: 4, md: "15%", lg: "18%", xl: "20%" },
+          mt: { xs: 3, sm: 4, md: 7 },
           borderRadius: "30px",
           boxShadow: 2,
-          mb:3,
+          mb: 3,
         }}
       >
         <Box
@@ -150,41 +152,34 @@ function Main() {
             bgcolor: "rgb(230, 230, 230)",
             borderTopLeftRadius: "30px",
             borderTopRightRadius: "30px",
-            height: { md: "10%", lg: "15%", xl: "20%" },
             display: "flex",
-            position: "relative",
-            justifyContent: "center",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: { xs: "center", md: "space-evenly" },
             alignItems: "center",
-            gap: { xs: 6, sm: 7, md: 10, lg: 8, xl: 16 },
+            gap: { xs: 2, sm: 3, md: 6 },
+            px: { xs: 2, sm: 3, md: 4 },
+            py: { xs: 3, sm: 4, md: 3 },
           }}
         >
           <Card
             sx={{
-              border: "solid 1px",
-              borderRadius: "30px",
-              height: {
-                xs: window.innerHeight * 0.25,
-                sm: window.innerHeight * 0.23,
-                md: window.innerHeight * 0.35,
-                lg: window.innerHeight * 0.35,
-                xl: window.innerHeight * 0.36,
-              },
-              width: {
-                xs: window.innerWidth * 0.14,
-                sm: window.innerWidth * 0.12,
-                md: window.innerWidth * 0.16,
-                lg: window.innerWidth * 0.13,
-                xl: window.innerWidth * 0.14,
-              },
+              border: "1px solid",
+              borderRadius: { xs: "20px", md: "28px" },
+              overflow: "hidden",
+              flexShrink: 0,
+              width: { xs: 160, sm: 180, md: 220, lg: 250, xl: 270 },
+              height: { xs: 200, sm: 225, md: 280, lg: 315, xl: 330 },
             }}
           >
             <CardMedia
+              component="img"
               sx={{
                 height: "100%",
                 width: "100%",
-                objectFit: "fill", // Ensures the image fills the area without distortion
+                objectFit: "cover",
+                objectPosition: "center",
               }}
-              image={Me}
+              src={Me}
               alt="Me"
             />
           </Card>
@@ -193,36 +188,47 @@ function Main() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              width: { xs: "100%", md: "auto" },
               color: "black",
             }}
           >
             <Typography
               sx={{
-                fontSize: { sm: 20, md: 35, lg: 48, xl: 56 },
-                fontWeight: "bold",
+                fontSize: { xs: 28, sm: 36, md: 44, lg: 52, xl: 56 },
+                fontWeight: 700,
+                textAlign: "center",
+                whiteSpace: "nowrap",
               }}
             >
               Alex Hristov
             </Typography>
             <Typography
-              sx={{ fontSize: { sm: 12, md: 20, lg: 23, xl: 26 }, mt: 3 }}
+              sx={{
+                fontSize: { xs: 16, sm: 18, md: 20, lg: 23, xl: 26 },
+                mt: { xs: 0.5, sm: 1, md: 2 },
+                textAlign: "center",
+              }}
             >
               Software Developer
             </Typography>
             <Box
               sx={{
                 display: "flex",
-                width: "80%",
-                justifyContent: "space-between",
-                mt: 5,
+                justifyContent: "center",
+                gap: { xs: 1.5, sm: 2, md: 3 },
+                mt: { xs: 1.5, sm: 2, md: 3 },
               }}
             >
               {icons.map((icon) => (
                 <IconButton
+                  key={icon.url}
+                  aria-label={icon.label}
                   sx={{
                     bgcolor: "rgb(255, 255, 255)",
                     color: "rgb(25, 118, 210)",
                     borderRadius: 100,
+                    width: { xs: 40, sm: 44, md: 48, lg: 52 },
+                    height: { xs: 40, sm: 44, md: 48, lg: 52 },
                   }}
                   onClick={() => window.open(icon.url)}
                 >
