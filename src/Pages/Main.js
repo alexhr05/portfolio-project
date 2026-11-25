@@ -28,6 +28,10 @@ import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import InsightsOutlinedIcon from "@mui/icons-material/InsightsOutlined";
+import DesktopWindowsOutlinedIcon from "@mui/icons-material/DesktopWindowsOutlined";
+import DnsOutlinedIcon from "@mui/icons-material/DnsOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
 
 import Menu from "./Menu.js";
 
@@ -46,7 +50,44 @@ function Main() {
       url: "https://www.linkedin.com/in/alex-hristov-14b00a277/",
     },
   ];
-  const skillCategories = [];
+  const skillCategories = [
+    {
+      title: "Frontend Development",
+      icon: <DesktopWindowsOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 18 }} />,
+      skills: [
+        { name: "React & Next.js", level: 86 },
+        { name: "TypeScript", level: 78 },
+        { name: "Tailwind CSS", level: 91 },
+      ],
+    },
+    {
+      title: "Backend Development",
+      icon: <DnsOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 18 }} />,
+      skills: [
+        { name: "Node.js", level: 82 },
+        { name: "Python / FastAPI", level: 76 },
+        { name: "GraphQL", level: 69 },
+      ],
+    },
+    {
+      title: "Tools & DevOps",
+      icon: <SettingsOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 18 }} />,
+      skills: [
+        { name: "Docker & Kubernetes", level: 72 },
+        { name: "AWS / Cloud", level: 74 },
+        { name: "Git & CI/CD", level: 89 },
+      ],
+    },
+    {
+      title: "AI",
+      icon: <AutoAwesomeOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 18 }} />,
+      skills: [
+        { name: "AI-assisted development", level: 82 },
+        { name: "Prompt engineering", level: 75 },
+        { name: "LLM integration", level: 68 },
+      ],
+    },
+  ];
   const today = new Date();
   const journeyEntries = [
     {
