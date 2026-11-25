@@ -23,14 +23,11 @@ import "../index.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import CheckIcon from "@mui/icons-material/Check";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
-import FrontendIcon from "../Images/frontendIcon.png";
-import BackendIcon from "../Images/backendIcon.png";
-import FrameworkIcon from "../Images/frameworkIcon.png";
+import InsightsOutlinedIcon from "@mui/icons-material/InsightsOutlined";
 
 import Menu from "./Menu.js";
 
@@ -49,23 +46,7 @@ function Main() {
       url: "https://www.linkedin.com/in/alex-hristov-14b00a277/",
     },
   ];
-  const frontendSkills = [
-    "Javascript",
-    "React",
-    "HTML/CSS",
-    "Boostrap 4",
-    "jQuery",
-  ];
-  const backendSkills = [
-    "Java",
-    "Python",
-    "MySQL",
-    "Kotlin",
-    "C#",
-    "C++",
-    "PHP",
-  ];
-  const otherSkills = ["PyGame", "Xampp", "Balsamiq"];
+  const skillCategories = [];
   const today = new Date();
   const journeyEntries = [
     {
@@ -428,266 +409,89 @@ function Main() {
           sx={{
             bgcolor: "rgb(255, 255, 255)",
             boxShadow: 1,
-            display: "flex",
-            flexDirection: "column",
+            border: "1px solid rgb(226, 232, 240)",
+            borderRadius: "18px",
+            p: { xs: 2.5, md: 3.5 },
           }}
         >
           <Box
             sx={{
-              mt: 3,
               display: "flex",
-              flexDirection: "column",
               alignItems: "center",
-              p: 3,
-              pl: 5,
-              width: "100%",
+              gap: 1.5,
             }}
           >
-            <Typography
+            <Box
               sx={{
-                fontSize: { xs: 16, sm: 18, md: 20, lg: 23, xl: 25 },
-                borderLeft: 5,
-                borderRight: 5,
-                pl: 3,
-                pr: 3,
-                borderColor: "Blue",
-                fontWeight: "bold",
+                width: 40,
+                height: 40,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "10px",
+                bgcolor: "rgb(239, 246, 255)",
               }}
             >
-              Преглед на умения
-            </Typography>
-            <Box></Box>
-            <Typography
-              sx={{
-                mt: 3,
-                fontSize: { xs: 14, sm: 16, md: 18, lg: 20, xl: 22 },
-              }}
-            >
-              Имам повече от {today.getFullYear() - 2019} години опит в
-              изграждането на уеб приложения за олимпиади или за определени
-              нужди. По-долу е представена кратка преглед на основните ми
-              технически умения и инструментите, които използвам. Искам да да
-              научите повече за моя опит? Разгледайте моята онлайн
-              автобиография.
+              <InsightsOutlinedIcon sx={{ color: "rgb(37, 99, 235)" }} />
+            </Box>
+            <Typography sx={{ fontSize: { xs: 20, sm: 22 }, fontWeight: 700 }}>
+              Skills &amp; Expertise
             </Typography>
           </Box>
           <Box
             sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              pt: 6,
-              position: "relative",
-              mb: 5,
+              mt: 3,
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "minmax(0, 1fr)",
+                md: "repeat(2, minmax(0, 1fr))",
+              },
+              columnGap: 4,
+              rowGap: 3,
             }}
           >
-            <Card
-              sx={{
-                width: "fit-content",
-                height: "auto",
-                boxShadow: 4,
-                background: {
-                  sm: "red",
-                  md: "blue",
-                  lg: "yellow",
-                  xl: "green",
-                },
-                whiteSpace: "normal",
-                mb: 2,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  // backgroundColor: "rgb(25, 118, 210)", // Choose a color
-                  backgroundColor: "rgb(255, 255, 255)", // Choose a color
-                  borderRadius: "50%",
-                  position: "absolute",
-                  transform: {
-                    xs: "translate(5%, -50%)",
-                    sm: "translate(30%, -50%)",
-                    md: "translate(45%, -50%)",
-                    lg: "translate(55%, -50%)",
-                    xl: "translate(66%, -50%)",
-                  },
-                  pt: 1,
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  sx={{ width: { md: "80%", lg: "88%", xl: "95%" } }}
-                  src={FrontendIcon}
-                />
-              </Box>
-              <CardContent
-                sx={{
-                  pt: 7,
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <Typography
-                  sx={{
-                    mb: 1.5,
-                    fontSize: { xs: 16, sm: 18, md: 20, lg: 22, xl: 25 },
-                    textAlign: "center",
-                  }}
-                >
-                  Frontend
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  {frontendSkills.map((frontendSkill) => (
+            {skillCategories.map((category) => (
+              <Box key={category.title}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
+                  {category.icon}
+                  <Typography sx={{ fontWeight: 700 }}>{category.title}</Typography>
+                </Box>
+                {category.skills.map((skill) => (
+                  <Box key={skill.name} sx={{ mb: 2 }}>
                     <Box
                       sx={{
                         display: "flex",
-                        mr: 2,
-                        mt: 0.5,
-                        pl: { xs: 0, sm: 1, md: 1, lg: 2, xl: 4 },
+                        justifyContent: "space-between",
+                        mb: 0.75,
+                        fontSize: 12,
                       }}
                     >
-                      <CheckIcon color="primary" />
-
-                      <Typography
-                        variant="body2"
-                        fontSize={{ xs: 11, sm: 13, md: 15, lg: 17, xl: 20 }}
-                        sx={{ pl: { xs: 0, sm: 1, md: 2, lg: 3, xl: 4 } }}
-                      >
-                        {frontendSkill}
+                      <Typography sx={{ fontSize: "inherit" }}>{skill.name}</Typography>
+                      <Typography sx={{ color: "rgb(37, 99, 235)", fontSize: "inherit" }}>
+                        {skill.level}%
                       </Typography>
                     </Box>
-                  ))}
-                </Box>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                width: "fit-content",
-                height: "auto",
-                boxShadow: 4,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100px", // Adjust size as needed
-                  height: "100px",
-                  // backgroundColor: "blue", // Choose a color
-                  backgroundColor: "rgb(255, 255, 255)", // Choose a color
-                  borderRadius: "50%",
-                  position: "absolute",
-                  transform: "translate(66%, -50%)",
-                  pt: 1,
-                }}
-              >
-                <img sx={{ pt: 5 }} src={BackendIcon} />
-              </Box>
-              <CardContent
-                sx={{
-                  pt: 7,
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <Typography sx={{ mb: 1.5, fontSize: 25, textAlign: "center" }}>
-                  Backend
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  {backendSkills.map((backendSkill) => (
                     <Box
                       sx={{
-                        display: "flex",
-                        mr: 2,
-                        mt: 1,
-                        pl: 5,
+                        height: 6,
+                        borderRadius: 999,
+                        bgcolor: "rgb(241, 243, 246)",
+                        overflow: "hidden",
                       }}
                     >
-                      <CheckIcon color="primary" />
-
-                      <Typography variant="body2" fontSize={20} sx={{ pl: 4 }}>
-                        {backendSkill}
-                      </Typography>
+                      <Box
+                        sx={{
+                          width: `${skill.level}%`,
+                          height: "100%",
+                          borderRadius: "inherit",
+                          bgcolor: "rgb(37, 99, 235)",
+                        }}
+                      />
                     </Box>
-                  ))}
-                </Box>
-              </CardContent>
-            </Card>
-            <Card
-              sx={{
-                width: "fit-content",
-                height: "auto",
-                boxShadow: 4,
-              }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "100px", // Adjust size as needed
-                  height: "100px",
-
-                  backgroundColor: "rgb(255, 255, 255)", // Choose a color
-                  borderRadius: "50%",
-                  position: "absolute",
-                  transform: "translate(70%, -50%)",
-                }}
-              >
-                <img sx={{ pt: 5 }} src={FrameworkIcon} />
+                  </Box>
+                ))}
               </Box>
-              <CardContent
-                sx={{
-                  pt: 7,
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <Typography sx={{ mb: 1.5, fontSize: 25, textAlign: "center" }}>
-                  Others
-                </Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                  }}
-                >
-                  {otherSkills.map((otherSkill) => (
-                    <Box
-                      sx={{
-                        display: "flex",
-                        mr: 2,
-                        mt: 1,
-                        pl: 5,
-                      }}
-                    >
-                      <CheckIcon color="primary" />
-
-                      <Typography variant="body2" fontSize={20} sx={{ pl: 4 }}>
-                        {otherSkill}
-                      </Typography>
-                    </Box>
-                  ))}
-                </Box>
-              </CardContent>
-            </Card>
+            ))}
           </Box>
         </Box>
       </Box>
