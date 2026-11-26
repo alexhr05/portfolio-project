@@ -207,7 +207,53 @@ function ProjectDetailsLayout({
               </Paper>
             )}
 
-           
+            {features.length > 0 && (
+              <Paper component="section" elevation={0} sx={panelSx}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}>
+                  <CheckCircleOutlineIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 19 }} />
+                  <Typography component="h2" sx={{ fontSize: 18, fontWeight: 800 }}>
+                    Key Features
+                  </Typography>
+                </Box>
+                <Stack spacing={1}>
+                  {features.map((feature) => (
+                    <Box
+                      key={feature.title}
+                      sx={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: 1,
+                        p: 1.25,
+                        border: "1px solid rgb(226, 232, 240)",
+                        borderRadius: "10px",
+                        bgcolor: "rgb(248, 250, 252)",
+                      }}
+                    >
+                      <CheckCircleOutlineIcon
+                        sx={{ color: "rgb(34, 197, 94)", fontSize: 17, mt: 0.15 }}
+                      />
+                      <Box>
+                        <Typography sx={{ fontSize: 13, fontWeight: 700 }}>
+                          {feature.title}
+                        </Typography>
+                        {feature.description && (
+                          <Typography
+                            sx={{
+                              mt: 0.4,
+                              color: "rgb(71, 85, 105)",
+                              fontSize: 12,
+                              lineHeight: 1.6,
+                            }}
+                          >
+                            {feature.description}
+                          </Typography>
+                        )}
+                      </Box>
+                    </Box>
+                  ))}
+                </Stack>
+              </Paper>
+            )}
           </Stack>
 
           {technologies.length > 0 && (
