@@ -294,6 +294,43 @@ function ProjectDetailsLayout({
             </Paper>
           )}
         </Box>
+{screenshots.length > 0 && (
+          <Paper component="section" elevation={0} sx={{ ...panelSx, mt: 2 }}>
+            <Typography component="h2" sx={{ mb: 1.5, fontSize: 18, fontWeight: 800 }}>
+              Screenshots
+            </Typography>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "minmax(0, 1fr)",
+                  sm: "repeat(2, minmax(0, 1fr))",
+                },
+                gap: 1.5,
+              }}
+            >
+              {screenshots.map((screenshot) => (
+                <Box key={screenshot.caption}>
+                  <CardMedia
+                    component="img"
+                    image={screenshot.image}
+                    alt={screenshot.caption}
+                    sx={{
+                      width: "100%",
+                      maxHeight: 360,
+                      objectFit: "contain",
+                      borderRadius: "8px",
+                      bgcolor: "rgb(241, 245, 249)",
+                    }}
+                  />
+                  <Typography sx={{ mt: 0.75, color: "rgb(71, 85, 105)", fontSize: 12 }}>
+                    {screenshot.caption}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Paper>
+        )}
 
     </Box>
   </Box>);
