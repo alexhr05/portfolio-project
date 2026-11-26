@@ -145,7 +145,7 @@ function ProjectDetailsLayout({
               gap: { xs: 1.5, sm: 2 },
               mt: 1,
               color: "rgb(71, 85, 105)",
-              fontSize: 13,
+              fontSize: 15,
             }}
           >
             {dateRange && (
@@ -196,7 +196,7 @@ function ProjectDetailsLayout({
                       key={`${index}-${paragraph.slice(0, 24)}`}
                       sx={{
                         color: "rgb(71, 85, 105)",
-                        fontSize: 14,
+                        fontSize: 16,
                         lineHeight: 1.7,
                         whiteSpace: "pre-line",
                       }}
@@ -225,7 +225,6 @@ function ProjectDetailsLayout({
                         alignItems: "flex-start",
                         gap: 1,
                         p: 1.25,
-                        border: "1px solid rgb(226, 232, 240)",
                         borderRadius: "10px",
                         bgcolor: "rgb(248, 250, 252)",
                       }}
@@ -234,7 +233,7 @@ function ProjectDetailsLayout({
                         sx={{ color: "rgb(34, 197, 94)", fontSize: 17, mt: 0.15 }}
                       />
                       <Box>
-                        <Typography sx={{ fontSize: 13, fontWeight: 700 }}>
+                        <Typography sx={{ fontSize: 14, fontWeight: 700 }}>
                           {feature.title}
                         </Typography>
                         {feature.description && (
@@ -280,11 +279,11 @@ function ProjectDetailsLayout({
                   >
                     <CodeOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 20 }} />
                     <Box>
-                      <Typography sx={{ fontSize: 12, fontWeight: 700 }}>
+                      <Typography sx={{ fontSize: 14, fontWeight: 700 }}>
                         {technology.name}
                       </Typography>
                       {technology.category && (
-                        <Typography sx={{ color: "rgb(100, 116, 139)", fontSize: 10 }}>
+                        <Typography sx={{ color: "rgb(100, 116, 139)", fontSize: 12 }}>
                           {technology.category}
                         </Typography>
                       )}

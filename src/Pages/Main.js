@@ -23,6 +23,7 @@ import "../index.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -34,6 +35,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
 
 import Menu from "./Menu.js";
+import { Link as RouterLink } from "react-router-dom";
 
 function Main() {
   const icons = [
@@ -236,6 +238,26 @@ function Main() {
                 </IconButton>
               ))}
             </Box>
+            <Button
+              component={RouterLink}
+              to="/projects"
+              endIcon={<ArrowForwardIcon />}
+              variant="contained"
+              sx={{
+                mt: { xs: 2, sm: 2.5 },
+                mb: { xs: -0.5, sm: -2 },
+                px: 2.5,
+                py: 1.1,
+                borderRadius: "10px",
+                bgcolor: "rgb(37, 99, 235)",
+                color: "white",
+                fontSize: { xs: 13, sm: 14 },
+                fontWeight: 700,
+                "&:hover": { bgcolor: "rgb(29, 78, 216)" },
+              }}
+            >
+              Explore My Work
+            </Button>
           </Box>
         </Box>
         <Box

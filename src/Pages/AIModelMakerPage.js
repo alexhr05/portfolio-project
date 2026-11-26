@@ -12,8 +12,8 @@ function AIModelMakerPage() {
       achievement="НОИТ participation - 2024"
       sourceCodeUrl="https://github.com/MihailDimitrov1235/ai-model-maker"
       overview={[
-        "В наши дни се отбелязва бум в информационните технологии, обработката на данни и използването на изкуствен интелект (AI), които се превръщат в ключови елементи за подобряване на най-различни процеси. Задвижвана от неограничения потенциал на технологията, идеята за приложения, които не само обработват данни, но и автоматизират създаването на AI модели, е важен и иновативен елемент от развитието на софтуерната индустрия.",
-        "В приложението може бързо и ефективно да се анализират големи обеми от данни. След това може да се тренира невронна мрежа, която да предсказва резултат или определена стойност въз основа на подадената информация.",
+        "Today, we are witnessing a boom in information technology, data processing, and the use of artificial intelligence (AI), which are becoming key elements in improving a wide variety of processes. Driven by the unlimited potential of technology, the idea of applications that not only process data but also automate the creation of AI models is an important and innovative element in the development of the software industry.",
+        "The application can quickly and efficiently analyze large volumes of data. A neural network can then be trained to predict a result or a specific value based on the input information provided. The application is designed to be user-friendly, allowing users to easily navigate through the different functionalities and features. It provides a seamless experience for users to upload datasets, train models, and evaluate predictions.",
       ]}
       technologies={[
         { name: "React", category: "Frontend" },
