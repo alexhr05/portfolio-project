@@ -26,6 +26,7 @@ const panelSx = {
 function ProjectDetailsLayout({
   title,
   heroImage,
+  heroImageOrientation = "landscape",
   overview,
   technologies = [],
   features = [],
@@ -67,18 +68,37 @@ function ProjectDetailsLayout({
           >
             Back to Projects
           </Button>
-          <CardMedia
-            component="img"
-            image={heroImage}
-            alt={`${title} preview`}
+          <Box
             sx={{
-              width: "100%",
-              height: { xs: 210, sm: 280, md: 360 },
-              objectFit: "cover",
-              borderRadius: "12px",
+              display: "flex",
+              justifyContent: "center",
               bgcolor: "rgb(226, 232, 240)",
+              borderRadius: "12px",
+              overflow: "hidden",
             }}
-          />
+          >
+            <CardMedia
+              component="img"
+              image={heroImage}
+              alt={`${title} preview`}
+              sx={{
+                width:
+                  heroImageOrientation === "portrait"
+                    ? { xs: "min(100%, 240px)", sm: "min(100%, 300px)" }
+                    : "100%",
+                height:
+                  heroImageOrientation === "portrait"
+                    ? "auto"
+                    : { xs: 210, sm: 280, md: 360 },
+                maxHeight:
+                  heroImageOrientation === "portrait"
+                    ? { xs: 420, sm: 500, md: 560 }
+                    : "none",
+                objectFit: heroImageOrientation === "portrait" ? "contain" : "cover",
+                borderRadius: "12px",
+              }}
+            />
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -307,7 +327,16 @@ function ProjectDetailsLayout({
               }}
             >
               {screenshots.map((screenshot) => (
-                <Box key={screenshot.caption} sx={{ minWidth: 0 }}>
+                <Box
+                  key={screenshot.caption}
+                  sx={{
+                    minWidth: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems:
+                      screenshot.orientation === "portrait" ? "center" : "stretch",
+                  }}
+                >
                   <Typography
                     sx={{
                       mt: 0.75,
@@ -325,7 +354,10 @@ function ProjectDetailsLayout({
                     alt={screenshot.caption}
                     sx={{
                       display: "block",
-                      width: "100%",
+                      width:
+                        screenshot.orientation === "portrait"
+                          ? { xs: "min(100%, 240px)", sm: "min(100%, 300px)" }
+                          : "100%",
                       height: "auto",
                       maxWidth: "100%",
                       objectFit: "contain",
