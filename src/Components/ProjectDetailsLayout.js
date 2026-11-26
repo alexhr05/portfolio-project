@@ -110,14 +110,14 @@ function ProjectDetailsLayout({
                 rel="noreferrer"
                 variant="contained"
                 startIcon={<OpenInNewIcon />}
-                sx={{ textTransform: "none", fontWeight: 700 }}
+                sx={{ textTransform: "none", fontWeight: 700, mt:1 }}
               >
                 Live Demo
               </Button>
             )}
             {sourceCodeUrl && (
               <Button
-                component="a"
+                
                 href={sourceCodeUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -127,6 +127,7 @@ function ProjectDetailsLayout({
                   bgcolor: "rgb(15, 23, 42)",
                   textTransform: "none",
                   fontWeight: 700,
+                  mt:1,
                   "&:hover": { bgcolor: "rgb(30, 41, 59)" },
                 }}
               >
@@ -294,9 +295,9 @@ function ProjectDetailsLayout({
             </Paper>
           )}
         </Box>
-{screenshots.length > 0 && (
-          <Paper component="section" elevation={0} sx={{ ...panelSx, mt: 2 }}>
-            <Typography component="h2" sx={{ mb: 1.5, fontSize: 18, fontWeight: 800 }}>
+        {screenshots.length > 0 && (
+          <Paper component="section" sx={{ ...panelSx, mt: 2 }}>
+            <Typography component="h2" sx={{ mb: 1.5, fontSize: 25, fontWeight: 800 }}>
               Screenshots
             </Typography>
             <Box
@@ -311,6 +312,9 @@ function ProjectDetailsLayout({
             >
               {screenshots.map((screenshot) => (
                 <Box key={screenshot.caption}>
+                  <Typography sx={{ mt: 0.75, mb:1,color: "rgb(71, 85, 105)", fontSize: 18 }}>
+                    {screenshot.caption}
+                  </Typography>
                   <CardMedia
                     component="img"
                     image={screenshot.image}
@@ -323,9 +327,7 @@ function ProjectDetailsLayout({
                       bgcolor: "rgb(241, 245, 249)",
                     }}
                   />
-                  <Typography sx={{ mt: 0.75, color: "rgb(71, 85, 105)", fontSize: 12 }}>
-                    {screenshot.caption}
-                  </Typography>
+                  
                 </Box>
               ))}
             </Box>

@@ -3,6 +3,7 @@ import AIModelMaker from "../Images/AIModelMaker.PNG";
 import AIModelMakerModelCharacteristics from "../Images/AIModelMakerModelCharacteristics.PNG";
 import ProjectDetailsLayout from "../Components/ProjectDetailsLayout";
 
+
 function AIModelMakerPage() {
   return (
     <ProjectDetailsLayout
@@ -41,6 +42,11 @@ function AIModelMakerPage() {
           caption: "Страница с трениран модел",
         },
       ]}
+      dateRange={[
+        "November 2023 - March 2024",
+      ]}
+      duration={["5 months"]}
+
     />
   );
 }
