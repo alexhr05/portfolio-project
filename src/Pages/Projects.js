@@ -150,11 +150,11 @@ function Projects() {
         }}
       >
         <Typography sx={{ fontSize: 36, mt: 6, fontWeight: "bold" }}>
-          Портфолио
+          Portfolio
         </Typography>
         <Typography sx={{ fontSize: 20, mt: 3, mb: 8, px: 2 }}>
-          Добре дошли в моето онлайн портфолио. Тук ще видите всички мои проекти
-          през годините.
+            Welcome to my online portfolio. Here you'll see all of my projects
+            over the years.
         </Typography>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "column", mx: { xs: 2, sm: 4, md: 8 }, my: 5 }}>
