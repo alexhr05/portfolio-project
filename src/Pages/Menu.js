@@ -18,11 +18,11 @@ import { NavLink } from "react-router-dom";
 const drawerWidth = 240;
 const navItems = [
   {
-    title: "Начало",
+    title: "Home",
     path: "/",
   },
   {
-    title: "Проекти",
+    title: "Projects",
     path: "/projects",
   },
 ];

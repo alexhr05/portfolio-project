@@ -61,7 +61,7 @@ function ProjectDetailsLayout({
               px: 0,
               color: "rgb(71, 85, 105)",
               textTransform: "none",
-              fontSize: 13,
+              fontSize: 18,
               "&:hover": { bgcolor: "transparent", color: "rgb(37, 99, 235)" },
             }}
           >
@@ -186,7 +186,7 @@ function ProjectDetailsLayout({
               <Paper component="section" elevation={0} sx={panelSx}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}>
                   <ArticleOutlinedIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 19 }} />
-                  <Typography component="h2" sx={{ fontSize: 18, fontWeight: 800 }}>
+                  <Typography component="h2" sx={{ fontSize: 25, fontWeight: 800 }}>
                     Project Overview
                   </Typography>
                 </Box>
@@ -196,7 +196,7 @@ function ProjectDetailsLayout({
                       key={`${index}-${paragraph.slice(0, 24)}`}
                       sx={{
                         color: "rgb(71, 85, 105)",
-                        fontSize: 16,
+                        fontSize: 18,
                         lineHeight: 1.7,
                         whiteSpace: "pre-line",
                       }}
@@ -212,7 +212,7 @@ function ProjectDetailsLayout({
               <Paper component="section" elevation={0} sx={panelSx}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 1.5 }}>
                   <CheckCircleOutlineIcon sx={{ color: "rgb(37, 99, 235)", fontSize: 19 }} />
-                  <Typography component="h2" sx={{ fontSize: 18, fontWeight: 800 }}>
+                  <Typography component="h2" sx={{ fontSize: 25, fontWeight: 800 }}>
                     Key Features
                   </Typography>
                 </Box>
@@ -233,7 +233,7 @@ function ProjectDetailsLayout({
                         sx={{ color: "rgb(34, 197, 94)", fontSize: 17, mt: 0.15 }}
                       />
                       <Box>
-                        <Typography sx={{ fontSize: 14, fontWeight: 700 }}>
+                        <Typography sx={{ fontSize: 18, fontWeight: 700 }}>
                           {feature.title}
                         </Typography>
                         {feature.description && (
@@ -241,7 +241,7 @@ function ProjectDetailsLayout({
                             sx={{
                               mt: 0.4,
                               color: "rgb(71, 85, 105)",
-                              fontSize: 12,
+                              fontSize: 16,
                               lineHeight: 1.6,
                             }}
                           >
@@ -302,16 +302,21 @@ function ProjectDetailsLayout({
             <Box
               sx={{
                 display: "grid",
-                gridTemplateColumns: {
-                  xs: "minmax(0, 1fr)",
-                  sm: "repeat(2, minmax(0, 1fr))",
-                },
-                gap: 1.5,
+                gridTemplateColumns: "minmax(0, 1fr)",
+                gap: { xs: 2, sm: 2.5 },
               }}
             >
               {screenshots.map((screenshot) => (
-                <Box key={screenshot.caption}>
-                  <Typography sx={{ mt: 0.75, mb:1,color: "rgb(71, 85, 105)", fontSize: 18 }}>
+                <Box key={screenshot.caption} sx={{ minWidth: 0 }}>
+                  <Typography
+                    sx={{
+                      mt: 0.75,
+                      mb: 1,
+                      color: "rgb(71, 85, 105)",
+                      fontSize: { xs: 16, sm: 18, md: 20 },
+                      fontWeight: 600,
+                    }}
+                  >
                     {screenshot.caption}
                   </Typography>
                   <CardMedia
@@ -319,14 +324,15 @@ function ProjectDetailsLayout({
                     image={screenshot.image}
                     alt={screenshot.caption}
                     sx={{
+                      display: "block",
                       width: "100%",
-                      maxHeight: 360,
+                      height: "auto",
+                      maxWidth: "100%",
                       objectFit: "contain",
                       borderRadius: "8px",
                       bgcolor: "rgb(241, 245, 249)",
                     }}
                   />
-                  
                 </Box>
               ))}
             </Box>
