@@ -1,50 +1,55 @@
 import React from "react";
-
 import BankSAASShowLoanPage from "../Images/BankSAASShowLoanPage.PNG";
 import BankSAASShowReportPage from "../Images/BankSAASShowReportPage.PNG";
-import BankSAASLoginLogo from "../Images/BankSAASLoginPage.PNG";
-
-
-
-import Menu from "./Menu.js";
-
+import BankSAASLoginPage from "../Images/BankSAASLoginPage.PNG";
+import ProjectDetailsLayout from "../Components/ProjectDetailsLayout";
 
 function BankSAASPage() {
   return (
-      <ProjectDetailsLayout
-      title="Awesome Car Game"
-      heroImage={AwesomeCarGameImage}
+    <ProjectDetailsLayout
+      title="Bank SAAS"
+      heroImage={BankSAASLoginPage}
       heroImageOrientation="portrait"
-      sourceCodeUrl="https://gitlab.com/Alexhr/awesome-car-game"
       overview={[
-        "Awesome Car Game is a single-player racing game created as a school project. The player drives along a road and tries to survive as long as possible while avoiding other cars and obstacles.",
-        "The game displays the player's score and remaining health during play. Collisions put the player's health at risk, so the goal is to keep driving and achieve a higher score.",
+        "Bank SAAS is a simplified banking application for keeping track of customer names, account balances, and credit information.",
+        "The application includes a loan repayment calculator. Users enter a loan amount, term, and interest rate to calculate the repayment amount. A client report also provides sorting and filtering options for the displayed financial data.",
       ]}
       technologies={[
         { name: "Java", category: "Programming language" },
-        { name: "2D graphics", category: "Game visuals" },
-        { name: "Collision handling", category: "Game mechanics" },
-        { name: "Score and health tracking", category: "Gameplay system" },
+        { name: "Desktop GUI", category: "User interface" },
+        { name: "Loan calculation", category: "Financial feature" },
+        { name: "Sorting and filtering", category: "Report tools" },
       ]}
       features={[
         {
-          title: "Single-player driving",
-          description: "Control one car and try to survive for as long as possible.",
+          title: "Customer financial records",
+          description:
+            "View customer names, credit amounts, and account balances in a report.",
         },
         {
-          title: "Avoid traffic and obstacles",
-          description: "Dodge other cars and objects on the road to avoid collisions.",
+          title: "Loan repayment calculator",
+          description:
+            "Calculate a repayment using the credit amount, loan term, and interest rate.",
         },
         {
-          title: "Track score and health",
-          description: "View your current score and remaining health while playing.",
+          title: "Sort client records",
+          description:
+            "Sort the report by credit amount or money balance in ascending or descending order.",
+        },
+        {
+          title: "Filter client records",
+          description:
+            "Filter report entries by balance thresholds, including amounts above or below 10,000 BGN.",
         },
       ]}
       screenshots={[
         {
-          image: AwesomeCarGamePlay,
-          caption: "Gameplay showing the score, health, and traffic",
-          orientation: "portrait",
+          image: BankSAASShowLoanPage,
+          caption: "Loan repayment calculator",
+        },
+        {
+          image: BankSAASShowReportPage,
+          caption: "Client report with sorting and filters",
         },
       ]}
       dateRange="May 2023 - June 2023"
