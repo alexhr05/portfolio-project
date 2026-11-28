@@ -15,7 +15,10 @@ function InteractiveElectronicsPage() {
       sourceCodeUrl="https://github.com/alexhr05/interactive-electronics"
       overview={[
         "Interactive Electronics is an educational website designed to teach students about electronic components, how they work, and how they are used in circuits.",
-        "The site combines lessons with practical activities. After learning the basics, students can work through interactive circuit exercises and check their understanding.",
+        "With this project, I advanced to the national round of the NOIT competition in 10th grade and became a 2022 laureate with a high score at the competition. With the widespread adoption of technology in our lives, the widespread use of microcomputers, miniaturization, advances in telecommunications, as well as the use of personal computers and phones by each of us has led to the development of many complex devices. But all of this would be unthinkable without a single science—Electronics.",
+        "On the website, users can open the site and either start playing a game right away or read the instructional materials. I have created a separate file containing detailed instructions on how to use the website. The program is designed so that users can log in, and user data is stored on the server. Any user can browse the site or play the game as a GUEST. If they wish, they can register and gain access to additional game features.",
+        "If a user wants to play as a guest, they will only have access to the first level. This is sort of like a demo version, allowing them to explore and get a feel for the game. Once they register, they will be able to play all levels.",
+        "The program supports full userLogin functionality. The following are supported: registration/login/logout/password change/forgotten password/automatic logout after a specified period of inactivity. User settings are saved in the session and retained until the EXIT button is clicked or the browser is closed",
       ]}
       technologies={[
         { name: "JavaScript", category: "Interactive behavior" },
